@@ -1,0 +1,20 @@
+{
+  "name": "lapor-par-rt",
+  "version": "1.0.0",
+  "description": "Sistem Informasi & Layanan Mandiri Warga Tingkat RT",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w frontend\" \"npm run dev -w backend\" --names FE,BE --prefix-colors cyan,yellow",
+    "dev:fe": "npm run dev -w frontend",
+    "dev:be": "npm run dev -w backend",
+    "build:fe": "npm run build -w frontend",
+    "build:be": "npm run build -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
